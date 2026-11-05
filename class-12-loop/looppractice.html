@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .namec {
+        width: 200px;
+        height: 200px;
+        padding: 5px;
+        border-radius: 20%;
+        border: 2px solid blue;
+        display: flex;
+        margin: 10px;
+        justify-content: center;
+      }
+      #container {
+        display: flex;
+        flex-direction: row;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script>
+      let container = document.getElementById("container")
+      let name = ["hasan", "mizan", "talha", "nayeem"]
+      for (x = 0;x<name.length;x++) {
+        let d = document.createElement("div")
+        d.className = "namec"
+
+        let head = document.createElement("span")
+        head.textContent = name[x]
+
+        d.appendChild(head)
+        container.appendChild(d)
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #parent {
+        width: 500px;
+      }
+      td {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="parent" cellspacing="0">
+      <tr>
+        <td>Name</td>
+        <td>Roll</td>
+        <td>Status</td>
+      </tr>
+    </table>
+    <script>
+      let ptable = document.getElementById("parent");
+      let student = [
+        { name: "Mizan", roll: 12, status: "active" },
+        { name: "Nayeem", roll: 13, status: "active" },
+        { name: "Talha", roll: 14, status: "inactive" },
+        { name: "Ayat", roll: 15, status: "active" },
+        { name: "Rita", roll: 16, status: "active" },
+      ];
+      for (x = 0; x < student.length; x++) {
+        if (student[x].status == "inactive") {
+          continue;
+        }
+        let tr = document.createElement("tr");
+        tr.innerHTML =
+          "<td>" +
+          student[x].name +
+          "</td>" +
+          "<td>" +
+          student[x].roll +
+          "</td>" +
+          "<td>" +
+          student[x].status +
+          "</td>" +
+          "<td> <img src='" +
+          student[x].photo +
+          "    width='60'></td>";
+        ptable.appendChild(tr);
+      }
+    </script>
+  </body>
+</html>
