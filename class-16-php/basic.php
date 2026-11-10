@@ -84,5 +84,3 @@ function addNumbers($a,$b){
 $sum = addNumbers(5,10);
 echo $sum;
 ?>
-
-<!-- {super global veribale in php with example (bangla),}{session & cookies ar modde parthokko} -->
